@@ -1,0 +1,20 @@
+<view class="search-container" style="width: 100%">
+	<scroll-view class="section" scroll-y="true" bindscrolltolower="lower">
+		<view class="brand-header">
+			<image src="{{ brandHeader }}" mode="aspectFill"></image>
+			<view class="brand">{{ brandName }}</view>
+		</view>
+		<view class="goods-wrap">
+			<view wx:for="{{ goodsList }}" wx:key="{{ item.goods_id }}" class="flex-view-item" catchtap="openGoods" data-id="{{ item.goods_id }}">
+				<view class="goods-img">
+					<image src="{{ item.goods_pic }}" mode="aspectFill"></image>
+				</view>
+				<view class="goods-detail">
+					<view class="brand-name ellipsis">{{ item.brand_name }}</view>
+					<view class="goods-name">{{ item.goods_name }}</view>
+					<view class="sale-price"> ¥{{ item.sale_price }}</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>

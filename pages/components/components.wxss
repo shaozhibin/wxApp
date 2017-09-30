@@ -1,0 +1,14 @@
+/* 图片组件 */
+.core-image{
+  width: 100%;
+  height: 100rpx;
+  background: no-repeat center center;
+  background-color: #fff;
+  background-image: url('https://pic.lehe.com/pic/_o/2f/6d/7419a03b7cbbf810e8f0a2806dc2_750_500.cz.png');
+  background-size: cover;
+}
+/* 收藏专辑 */
+.collection-btn{
+  font-size: 32rpx;
+  color:#f66;
+}

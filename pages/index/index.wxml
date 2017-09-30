@@ -1,0 +1,45 @@
+<view class="index-container">
+  <!-- <view class="index-header"></view> -->
+  <view class="scroll-view">
+    <view wx:for="{{ dataList }}" wx:for-item="itemName" wx:key="{{ item.collection_id }}" class="item">
+      <view wx:if="{{itemName.type == 'collection'}}">
+        <view class="group-owner">
+          <view class="avatar" style="background-image:url({{itemName.item.owner.avatar || 'https://pic.lehe.com/pic/_o/7b/d2/a9d303d7f89b16f428f5f9af18e5_100_100.cz.png'}})">
+            <view class="icon" style="background-image:url({{itemName.item.owner.certificate_icon}})" wx:if="{{itemName.item.owner.certificate_icon}}"></view>
+          </view>
+          <view class="right">
+            <view class="name">{{itemName.item.owner.nick_name}}</view>
+            <view class="certificate_name">{{itemName.item.owner.certificate_name}}</view>
+          </view>
+        </view>
+        <view class="collection-banner" catchtap="openCollection" data-id="{{itemName.item.collection_id}}" style="background-image:url({{itemName.item.cover_image.image_middle || 'https://pic.lehe.com/pic/_o/2f/6d/7419a03b7cbbf810e8f0a2806dc2_750_500.cz.png'}})">
+          <view class="collection-content">
+            <view class="title ellipsis">{{itemName.item.title}}</view>
+            <view class="desc ellipsis">{{itemName.item.description}}</view>
+          </view>
+        </view>
+          <view class="scroll-y">
+              <view class="special">
+                <view class="special_item" wx:for="{{itemName.item.goods}}" wx:for-item="collectionItemName" wx:key="{{collectionItemName.goods_id}}">
+                  <view class="special_img" style="background-image:url({{collectionItemName.main_image.image_poster}})">
+                  </view>
+                  <view class="special_title">gucci</view>
+                  <view class="special_look">999</view>
+                </view>
+              </view>
+          </view>
+      </view>
+      <view wx:if="{{itemName.type == 'goods'}}">
+        <view class="goods-banner" catchtap="openGoods" data-id="{{itemName.item.goods_id}}" style="background-image:url({{itemName.item.main_image.image_middle || 'https://pic.lehe.com/pic/_o/2f/6d/7419a03b7cbbf810e8f0a2806dc2_750_500.cz.png'}})"></view>
+        <view class="goods-content">
+          <view class="brand_name">{{itemName.item.brand_name}}</view>
+          <view class="goods_name ellipsis">{{itemName.item.goods_name}}</view>
+          <view class="final_price">￥{{itemName.item.final_price}}</view>
+        </view>
+      </view>
+    </view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">  
+      加载中...  
+    </loading>
+  </view>  
+</view>

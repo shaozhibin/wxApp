@@ -1,0 +1,20 @@
+<view class="aToZ-container">
+	<view class="search-box">
+		<input class="search-btn" placeholder="输入品牌" placeholder-style="color: #ccc" bindinput="bindSearchInput" bindconfirm="bindSearchConfirm" />
+		<view class="search-msg" v-if="searchMsg">{{searchMsg}}</view>
+	</view>
+
+	<scroll-view class="brand-box" scroll-y="true" scroll-into-view="{{ scrollToItem }}">
+		<view wx:for="{{ brandIndex }}" wx:for-index="index" wx:key="item" wx:if="{{ brandSort[item] }}" class="item" id="{{ 'brand_' + index }}">
+			<view class="title">{{ item}}</view>
+			<view class="item" wx:for="{{ brandSort[item] }}" wx:for-item="brand" wx:key="brand.id" catchtap="search" data-id="{{ brand.id }}" data-name="{{ brand.name }}">
+				<text>{{ brand.name}}</text>
+			</view>
+		</view>
+	</scroll-view>
+
+	<view class="picker-box" catchtouchstart="touchStart" catchtouchmove="touchMove">
+		<view class="item" id="{{ 'picker-' + index }}" wx:for="{{ brandIndex }}" wx:for-index="index" wx:key="item" catchtap="showBrand">{{item}}</view>
+	</view>
+
+</view>

@@ -1,0 +1,9 @@
+<!-- 图片组件 -->
+<template name="coreImage">
+  <view class="core-image"></view>
+</template>
+<!-- 收藏专辑组件 -->
+<template name="collectionBtn">
+  <view class="collection-btn">+收藏专辑</view>
+</template>
+

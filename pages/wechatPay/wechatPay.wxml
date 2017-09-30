@@ -1,0 +1,2 @@
+<!--pages/wechatPay/wechatPay.wxml-->
+<view catchtap="doWechatPay">发起微信支付</view>

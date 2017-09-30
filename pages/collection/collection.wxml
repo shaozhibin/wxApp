@@ -1,0 +1,39 @@
+<import src="/pages/components/components.wxml" />
+<view class="higo-container">
+  <view class="header">
+    <view class="header-banner" style="background-image:url({{collectionData.cover_image.image_middle}})">
+    </view>
+    <view class="avatar" style="background-image:url({{collectionData.owner.avatar}})">
+      <view class="icon" style="background-image:url({{collectionData.owner.certificate_icon}})"></view>
+    </view>
+    <view class="owner">{{collectionData.owner.nick_name}}{{collectionData.owner.certificate_name}}</view>
+  </view>
+
+     <view class="scroll-view">
+    <view wx:for="{{ goodsList }}" wx:key="{{ item.goods_id }}" class="item" catchtap="openGoods">
+        <image src="{{ item.goods_image.image_poster || 'https://pic.lehe.com/pic/_o/2f/6d/7419a03b7cbbf810e8f0a2806dc2_750_500.cz.png'}}" class="img"></image>
+        <view class="content">
+          <view class="name">{{item.brand_name}}</view>
+          <view class="desc">{{item.goods_name}}</view>
+          <view class="price">{{item.goods_price}}</view>
+        </view>
+    </view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">  
+      加载中...  
+    </loading>
+  </view>   
+
+  <view class="collection" wx:if="{{goodsListComplete}}">
+    <view class="collection-more">发现更多流行专辑</view>
+    <view class="related">
+      <view wx:for="{{relatedList}}" wx:key="{{ item.collection_id }}" class="related-content" data-id="{{item.collection_id}}" catchtap="openCollection">
+        <view class="related-image" style="background-image:url({{item.cover_image.image_poster || 'https://pic.lehe.com/pic/_o/2f/6d/7419a03b7cbbf810e8f0a2806dc2_750_500.cz.png'}})"></view>
+        <view class="avatar" style="background-image:url({{item.cover_image.image_poster}})">
+      <view class="icon" style="background-image:url({{item.cover_image.image_poster}})"></view>
+        </view>
+        <view class="title">{{item.title}}</view>
+        <view class="description-text">{{item.description_text}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+.aToZ-container{
+	font-family: PingFangSC-Regular, Arial, Tahoma, sans-serif;font-size: 34rpx;color: #333;
+	position: absolute;top: 0;right: 0;bottom: 0;left: 0;
+}
+
+.search-box{
+	margin: 80rpx 0 0;
+	height: 170rpx;box-sizing: border-box;
+}
+.search-btn{
+	width: 670rpx;height: 90rpx;margin: 0 auto;
+	color: #666;line-height: 80rpx;text-align: center;
+	background: #f1f1ed;border-radius: 5rpx;
+}
+.search-msg{
+	margin-top: 30rpx;
+	font-size: 24rpx;color: #999;text-align: center;
+}
+
+.brand-box{
+	overflow: hidden;
+	box-sizing: border-box;
+	margin-bottom: 30rpx;
+	padding-left: 40rpx;
+	height: calc(100% - 250rpx);
+}
+.brand-box .title{ font-weight: bold;margin: 60rpx 0 0;line-height: 40rpx; }
+.brand-box .item{ line-height: 90rpx;font-size: 30rpx; }
+
+.picker-box{
+	position: fixed;right: 0;top: 315rpx;z-index: 10;
+	font-size: 20rpx;color: #666;text-align: center;line-height: 1.4;font-weight: bold;
+}
+.picker-box .item{ width: 100rpx; }

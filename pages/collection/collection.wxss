@@ -1,0 +1,115 @@
+@import "/pages/components/components";
+page{
+  font-family: PingFangSC-Regular, Arial, Tahoma, sans-serif;
+  background: #F1F1ED;
+}
+/* 头部 */
+.header{
+  width: 100%;
+  background: #fff;
+}
+.header-banner{
+  width: 100%;
+  height: 400rpx;
+  background: no-repeat center center;
+  background-size:cover;
+  z-index: 50;
+}
+.header .avatar{
+  width: 120rpx;
+  height: 120rpx;
+  background: no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: -60rpx;
+  margin-left: 315rpx;
+  z-index: 100;
+  position: relative;
+}
+.header .avatar .icon{
+  position: absolute;
+  width: 26rpx;
+  height: 26rpx;
+  background: no-repeat center center;
+  background-size: cover;
+  right: 3rpx;
+  bottom: 3rpx;
+}
+.owner{
+  font-size: 20rpx;
+  color: #666;
+  text-align: center;
+  padding: 16rpx 0rpx 30rpx 0rpx;
+}
+/* 滚动加载 */
+.scroll-view{
+  background: #F1F1ED;
+}
+.scroll-view .item:nth-child(even){
+  margin-left:20rpx;
+}
+.item{
+  width:365rpx;
+  float: left;
+  margin-top:20rpx;
+}
+.item .img{
+  width:365rpx;
+  height: 365rpx;
+  display: block;
+}
+.item .content{
+  background: #fff;
+  box-sizing: border-box;
+  padding: 10rpx;
+  line-height: 28rpx;
+}
+.item .content .name{
+  font-size:28rpx;
+  color:#333;
+}
+.item .content .desc{
+  font-size:20rpx;height: 60rpx;line-height: 32rpx;margin: 10rpx 0rpx 5rpx 0rpx;color:#666;overflow: hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical; 
+}
+.item .content .price{
+  font-size:24rpx;color:#666;
+}
+
+/* 更多流行专辑 */
+.collection-more{
+  text-align: center;padding: 108rpx 0rpx 30rpx 0rpx;clear: both;
+}
+.related{
+  z-index: 50;
+}
+.related .related-content{
+  background: #fff;float: left;margin-bottom: 20rpx;
+}
+.related .related-image{
+  width:365rpx;height: 365rpx;background: no-repeat center center;background-size: cover;
+}
+.related .related-content:nth-child(even){
+  margin-left: 20rpx;
+}
+.related .avatar{
+  width: 60rpx;height: 60rpx;background: no-repeat center center;
+  background-size: cover;border-radius: 50%;margin-top: -30rpx;
+  margin-left: 167rpx;z-index: 100;position: relative;
+}
+.related .avatar .icon{
+  position: absolute;width: 26rpx;height: 26rpx;background: no-repeat center center; background-size: cover;right: -2rpx;bottom: -2rpx;
+}
+.related .title{
+  width: 365rpx;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 14rpx 20rpx 17rpx 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.description-text{
+ color: #666;font-size: 20rpx;text-align: center;margin-bottom: 29rpx;
+}
